@@ -34,9 +34,7 @@ def karatsuba(intX, intY):
 
     return XYproduct;
 
-print(karatsuba(1234,56789) == (1234*56789))
-print(karatsuba(56789,1234) == (1234*56789))
-print(karatsuba(1,789) == 789)
-print(karatsuba(789,1) == 789)
-print(karatsuba(1234,5678) == (1234*5678))
-print(karatsuba(1,3) == 3)
+int1 = 3141592653589793238462643383279502884197169399375105820974944592
+int2 = 2718281828459045235360287471352662497757247093699959574966967627
+
+print(karatsuba(int1,int2))

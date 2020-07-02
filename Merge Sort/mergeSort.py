@@ -6,7 +6,7 @@ def mergeSort(numArray):
 
     pivot = (len(numArray) // 2);
     half1, half2 = numArray[0:pivot], numArray[pivot:];
-    print(half1,half2)
+
     return merge(mergeSort(half1), mergeSort(half2));
 
 
@@ -29,7 +29,6 @@ def merge(numArray1, numArray2):
     elif pointer2 < sizeA2:
         sorted.extend(numArray2[pointer2:]);
 
-    print(sorted)
     return sorted;
 
 
