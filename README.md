@@ -7,3 +7,4 @@ Merge Sort - O(nlogn)
 Karatsuba Multiplication
 Brute Force Inversion Counter - Quadratic time
 Merge Sort Inversion Counter - O(nlogn)
+Strassens Matrix Multiplication Algorithm - subcubic
