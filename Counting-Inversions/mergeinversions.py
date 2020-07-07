@@ -12,7 +12,7 @@ def sort_and_count(array_A):
 
     pivot = len(array_A) // 2;
     # check the amount of inversions on the front and back half of the array
-    left_inversions, sorted_1st = sort_and_count(array_A[0:pivot])
+    left_inversions, sorted_1st = sort_and_count(array_A[:pivot])
     right_inversions, sorted_2nd = sort_and_count(array_A[pivot:])
 
     # check the inversions where for i,j, i<n/2<=j A[i] > A[j] / split inversions
@@ -31,8 +31,7 @@ def count_split_invr(half_1, half_2):
     index_2 = 0;
     sorted = [];
     split_inversions = 0;
-    split_index = min(len(half_1), len(half_2));
-    while index_1 < split_index and index_2 < split_index:
+    while index_1 < len(half_1) and index_2 < len(half_2):
         if half_1[index_1] > half_2[index_2]:
             # since both arrays are sorted, if an element in the right array
             # is smaller than the left, then the right item must also be smaller
@@ -43,15 +42,18 @@ def count_split_invr(half_1, half_2):
         else:
             sorted.append(half_1[index_1]);
             index_1 +=1
-    if index_1 != split_index:
-        sorted.extend(half_1[index_1:]);
-    else:
-        sorted.extend(half_2[index_2:]);
+    sorted.extend(half_1[index_1:]);
+    sorted.extend(half_2[index_2:]);
 
     return split_inversions, sorted
 
 
 
-array = [8,7,6,5,4,3,2,1]
-splits, sorted = sort_and_count(array)
-print('There were {} inversions in the array {}'.format(splits,array))
+pars_matrix = open("matrix.txt")
+matrix = []
+for str in pars_matrix.read().split():
+    matrix.append(int(str))
+
+
+splits, sorts = sort_and_count(matrix)
+print(splits)
