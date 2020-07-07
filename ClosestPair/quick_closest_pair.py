@@ -1,5 +1,5 @@
 import math
-
+# for arrays >= size 2
 # find the closest pair of points in given array
 def find_closest(point_array):
     # setup steps
