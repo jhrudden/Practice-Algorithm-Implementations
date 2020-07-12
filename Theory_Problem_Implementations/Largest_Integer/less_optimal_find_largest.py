@@ -1,3 +1,6 @@
+# less optimized versions of find largest integer algorithm
+
+
 
 # You are a given a unimodal array of n distinct elements, meaning that its
 # entries are in increasing order up until its maximum element, after which its
@@ -6,10 +9,11 @@
 
 # find the largest integer in a unimodal array
 def find_largest(input_array):
-    # base case
+    # base case <= 3
     # if input array is of size 2 return the largest integer of the pair
     # else return the only item in the array
     if len(input_array) <= 2:
+        print("base")
         if len(input_array) == 1:
             return input_array[0];
         else:
@@ -18,7 +22,7 @@ def find_largest(input_array):
             else:
                 return input_array[1];
 
-
+    print("recurr")
     pivot = len(input_array) // 2;
     # recursively find the largest value in each half of the array
     largest_half_1 = find_largest(input_array[:pivot]);
