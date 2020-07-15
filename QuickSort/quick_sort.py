@@ -8,7 +8,6 @@ def quick_sort(unsorted_array, start, end):
     if end - start <= 1:
         return;
 
-    # in order to be quick sort we need a way to
     pivot = find_pivot(unsorted_array,start,end);
     pivot = partition(unsorted_array, start, end, pivot)
     quick_sort(unsorted_array, start, pivot)
