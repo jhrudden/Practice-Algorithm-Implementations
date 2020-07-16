@@ -1,5 +1,4 @@
-
-
+import random
 # sort a arbitrarily ordered array using famous QuickSort Algorithm
 def quick_sort(unsorted_array, start, end):
     # Base Case
@@ -13,8 +12,9 @@ def quick_sort(unsorted_array, start, end):
     quick_sort(unsorted_array, start, pivot)
     quick_sort(unsorted_array, pivot+1, end)
 
+# randomly pick a pivot which is start<=pivot<=end
 def find_pivot(array,start,end):
-    return (end+start)//2;
+    return random.randrange(start, end);
 
 def partition(unsorted_array, start, end, pivot):
     # pre partition step
