@@ -47,7 +47,12 @@ def partition(unsorted_array, start, end, pivot):
 
     return border_index - 1
 
-a=[8,7,6,5,4,3,2,1]
+text_file = open("unsorted_integers.txt")
+text_file = text_file.read().split()
+a = []
+for str in text_file:
+    a.append(int(str))
+
 print(a)
-quick_sort(a,0,8)
+quick_sort(a,0,len(a))
 print(a)
