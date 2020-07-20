@@ -47,6 +47,7 @@ def partition(unsorted_array, start, end, pivot):
 
     return border_index - 1
 
+# test if QS can sort a list of 10000 arbitrarily sorted integers
 text_file = open("unsorted_integers.txt")
 text_file = text_file.read().split()
 a = []
